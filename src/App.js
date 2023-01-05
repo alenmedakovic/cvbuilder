@@ -1,6 +1,7 @@
 import './App.css';
 import PaperInput from './PaperInput';
 import Navbar from "./Navbar";
+// import Body from "./Body";
 import React from 'react';
 
 function App() {
