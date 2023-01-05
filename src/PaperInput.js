@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import undoIcon from "./photos/undoicon.png"
 
 function PaperInput() {
   const dropRef = useRef(null);
@@ -11,24 +12,42 @@ function PaperInput() {
     event.preventDefault();
     const data = event.dataTransfer.getData('text');
     dropRef.current.innerHTML = `
-      <div class="flex items-center justify-between p-2 bg-gray-200 rounded-md">
+      <div class="flex items-center justify-between p-2 bg-white rounded-md">
         <span>${data}</span>
       </div>
       `;
   } 
 
+  const handleUndoDrop = () => {
+    dropRef.current.innerHTML = ``;
+  }
+
   return (
       <div className="flex h-screen">
       <div className="w-1/2 bg-white flex flex-col items-center justify-center">
-        <div className="text-center font-bold text-xl mb-4">Text above box</div>
-        <div className="border-t-2 h-5/6 w-4/6 shadow-xl" ref={dropRef} onDragOver={handleDragOver}
+        <div className="bg-white w-12 h-12 ml-auto mr-4 relative top-24">
+          <button className="undoButton cursor-pointer block w-full h-full" onClick={handleUndoDrop}>
+          <img src={undoIcon} alt="Undo Icon"></img>
+          </button>
+        </div>
+        <div className="text-center font-bold text-xl mb-4">Build your CV</div>
+        <div className="border-t-2 h-5/6 w-4/6 shadow-xl mb-4" ref={dropRef} onDragOver={handleDragOver}
         onDrop={handleDrop}>
         <div className="h-full w-full bg-white rounded-md p-4 shadow-lg">
         </div>
         </div>
       </div>
-      <div className="w-1/2 bg-black flex items-center justify-center">
-        <div className="bg-gray-300 h-12 w-12 p-4 text-center" draggable onDragStart={(event) =>
+      <div className="w-1/2 bg-white flex items-center justify-center">
+      <div className="bg-white h-16 w-60 absolute top-20">
+        <p className="mt-14 text-center font-bold text-xl">Templates</p>
+      </div>
+      <div className="bg-white h-60 flex w-2/5 absolute top-40 right-16">
+        <div className="bg-white h-48 w-28 ml-8 mt-4 shadow-xl border-t-2"></div>
+        <div className="bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+        <div className="bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+        <div className="bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+      </div>
+        <div className="bg-white h-12 w-12 p-4 text-center" draggable onDragStart={(event) =>
           event.dataTransfer.setData("text", "Draggable Element")}> Drag me!
         </div>
       </div>
