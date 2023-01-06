@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import undoIcon from "./photos/undoicon.png"
+import TemplateOne from './TemplateOne';
 
 function PaperInput() {
   const dropRef = useRef(null);
@@ -41,11 +42,13 @@ function PaperInput() {
       <div className="bg-white h-16 w-60 absolute top-20">
         <p className="mt-14 text-center font-bold text-xl">Templates</p>
       </div>
-      <div className="bg-white h-60 flex w-2/5 absolute top-40 right-16">
-        <div className="bg-white h-48 w-28 ml-8 mt-4 shadow-xl border-t-2"></div>
-        <div className="bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
-        <div className="bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
-        <div className="bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+      <div className="snap-x snap-mandatory overflow-scroll overflow-y-hidden bg-white shadow-md h-60 flex w-2/5 absolute top-40 right-16">
+        <div className="flex-shrink-0 bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+        <div className="flex-shrink-0 bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+        <div className="flex-shrink-0 bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+        <div className="flex-shrink-0 bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+        <div className="flex-shrink-0 bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
+        <div className="flex-shrink-0 bg-white h-48 w-28 ml-6 mt-4 shadow-xl border-t-2"></div>
       </div>
         <div className="bg-white h-12 w-12 p-4 text-center" draggable onDragStart={(event) =>
           event.dataTransfer.setData("text", "Draggable Element")}> Drag me!
