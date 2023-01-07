@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import undoIcon from "./photos/undoicon.png"
-import TemplateOne from './TemplateOne';
+import TemplateOne from './TemplateTwo';
+import TemplateTwo from './TemplateTwo';
 
 function PaperInput() {
   const dropRef = useRef(null);
@@ -32,9 +33,9 @@ function PaperInput() {
           </button>
         </div>
         <div className="text-center font-bold text-xl mb-4">Build your CV</div>
-        <div className="border-t-2 h-5/6 w-4/6 shadow-xl mb-4 overflow-hidden" ref={dropRef} onDragOver={handleDragOver}
-        onDrop={handleDrop}><TemplateOne />
-        <div className="h-full w-full bg-white rounded-md p-4 shadow-lg">
+        <div className="border-t-2 w-4/6 shadow-xl mb-4 overflow-scroll" ref={dropRef} onDragOver={handleDragOver}
+        onDrop={handleDrop}><TemplateTwo />
+        <div className="w-full bg-white rounded-md p-4 shadow-lg">
         </div>
         </div>
       </div>
