@@ -32,8 +32,8 @@ function PaperInput() {
           </button>
         </div>
         <div className="text-center font-bold text-xl mb-4">Build your CV</div>
-        <div className="border-t-2 h-5/6 w-4/6 shadow-xl mb-4" ref={dropRef} onDragOver={handleDragOver}
-        onDrop={handleDrop}>
+        <div className="border-t-2 h-5/6 w-4/6 shadow-xl mb-4 overflow-hidden" ref={dropRef} onDragOver={handleDragOver}
+        onDrop={handleDrop}><TemplateOne />
         <div className="h-full w-full bg-white rounded-md p-4 shadow-lg">
         </div>
         </div>
