@@ -1,13 +1,12 @@
-import React from 'react'
-import "./templateOne.css"
+import React from 'react';
 import profilePic from "./photos/profilePic.png";
-import dotIcon from "./photos/dot.png"
+import dotIcon from "./photos/dot.png";
 
 
 
 function TemplateTwo() {
   return (
-    <div className="bg-gray-100">
+    <div id="template-two" className="bg-gray-100">
     <div className="bg-blue-800 w-full h-16 flex items-center justify-between px-4 py-3">
       <div className="flex-shrink-0 w-1/7 h-full">
         <img className="object-fill h-full w-full rounded-full" src={profilePic} />

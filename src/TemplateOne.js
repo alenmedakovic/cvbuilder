@@ -1,13 +1,12 @@
-import React from 'react'
-import "./templateOne.css"
+import React from 'react';
 import profilePic from "./photos/profilePic.png";
-import dotIcon from "./photos/dot.png"
+import dotIcon from "./photos/dot.png";
 
 
 
 function TemplateOne() {
   return (
-    <div className="h-screen w-screen">
+    <div id="template-one" className="h-screen w-screen">
       <div className="bg-orange-300 w-full h-16">
         <div className="bg-black border-r-8 sm:border-r-4 border-white text-white w-1/7 h-full mx-start" style={{float: 'left'}}>
         <img className="object-fill h-full w-full"  src={profilePic} />
@@ -36,7 +35,7 @@ function TemplateOne() {
              hac habitasse platea dictumst. Aliquam consequat orci sed mauris semper dictum
           </p>
         </div>
-        <div className="ml-24 h-1/4 mt-10 bg-white w-5/6 flex-auto sm:mt-6 sm:ml-16 sm:h-28">
+        <div className="ml-24 h-1/4 mt-10 bg-white w-5/6 flex-auto sm:mt-8 sm:ml-16 sm:h-28">
         <div className="bg-gray-800 max-w-xs h-1/6 w-1/4 sm:w-20 sm:h-4 sm:text-base">
           <h1 className="text-white text-l text-center sm:mr-1 font-serif">Education</h1>
         </div>
